@@ -1,4 +1,4 @@
-# Week 13: ML Comparison Demo
+# Week 13: ML Comparison Demo 
 
 Teaching demo for **QM 2023 — Statistics II: Data Analytics**, Week 13 (Machine Learning).
 
