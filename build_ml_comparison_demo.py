@@ -80,11 +80,13 @@ def build_notebook() -> nbf.NotebookNode:
                     r"C:\\Users\\cas3526\\dev\\Teaching\\Quantitative-Methods-Class\\Course-Design\\Module 4------------------------------\\Week 13 - Machine Learning\\demos"
                 )
 
+            local_data_path = NOTEBOOK_DIR / "data" / "REIT_sample_2004_2024.csv"
             REPO_ROOT = NOTEBOOK_DIR
             while REPO_ROOT != REPO_ROOT.parent and not (REPO_ROOT / "Data").exists():
                 REPO_ROOT = REPO_ROOT.parent
 
-            DATA_PATH = REPO_ROOT / "Data" / "REIT_sample_2004_2024.csv"
+            fallback_data_path = REPO_ROOT / "Data" / "REIT_sample_2004_2024.csv"
+            DATA_PATH = local_data_path if local_data_path.exists() else fallback_data_path
             FIGURES_DIR = NOTEBOOK_DIR / "figures"
             FIGURES_DIR.mkdir(exist_ok=True)
 

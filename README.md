@@ -58,9 +58,9 @@ Or in VS Code: open the file and click **Run All**.
 
 ## Data
 
-Uses `Data/REIT_sample_2004_2024.csv` from the repo root — a monthly REIT panel with firm characteristics, returns, and risk measures.
+Uses `demos/data/REIT_sample_2004_2024.csv` — a local copy of the monthly REIT panel with firm characteristics, returns, and risk measures.
 
-The notebook searches upward from its location to find the `Data/` folder automatically. No path configuration required if you run from inside the repo.
+The notebook now prefers the local `demos/data/` copy and falls back to the repo-level `Data/` folder if needed. No path configuration required if you run from inside the repo.
 
 ## Output Figures
 
